@@ -31,7 +31,6 @@ let bici = [
 ]
 
 let [ , , , bicileggera] = bici;
-console.log(bicileggera);
 
 document.getElementById('bici_leggera').insertAdjacentHTML("beforeend", `
 La bici più leggera  è la <strong>${bicileggera.nome}</strong>, che pesa <strong>${bicileggera.peso} kilogrammi
@@ -84,9 +83,21 @@ for (let i = 0; i < squadre.length; i++) {
     squadre[i].falliSubiti = Math.floor(Math.random() * 250);
 }
 
-console.log(squadre);
+let nuovoArray = [];
 
-let [squ1, squ2, squ3, squ4, squ5] = squadre;
+for (let i = 0; i < squadre.length; i++) {
+
+    let {nome, falliSubiti} = squadre[i];
+    nuovoArray.push({nome, falliSubiti});
+    console.log(nuovoArray[i]);
+    //nuovoArray.push({nome: squadre[i].nome, falliSubiti: squadre[i].falliSubiti});
+
+    
+}
+
+
+
+
 
 
 
