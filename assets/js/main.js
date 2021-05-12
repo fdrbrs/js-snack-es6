@@ -95,9 +95,23 @@ for (let i = 0; i < squadre.length; i++) {
     
 }
 
+/* 
+Snack 3:
+Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
+La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
+:boom: Usiamo i nuovi metodi degli array foreach o filter.
+*/
+
+const alfabeto = ['a','b','c','d','e','f','g','h','i','l','m','n','o','p','q','r','s','t','u','v','z'];
+
+function fromToArray (array, from, to) {
+    let estratto = array.filter((lettera)=> {
+        if (array.indexOf(lettera) >= array.indexOf(array[from]) && array.indexOf(lettera) <= array.indexOf(array[to])) {return true;}
+        return false;
+    });
+    return estratto;
+}
 
 
 
-
-
-
+console.log(fromToArray(alfabeto,3,19));
